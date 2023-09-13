@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        textarea {
+            border: 5px solid rgb(73, 0, 245);
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autcomplete="off">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest" required>
+                <option value="" selected>escolha um estado</option>
+                <optgroup label="Região Sul">
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Parana</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+                <optgroup label="Região Sudeste">
+                    <option value="SP"> São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="BH">Bahia</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" autocomplete="off" list="lstprof" required placeholder="Selecione uma Profissão">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option>Contabilidade</option>
+                <option>Programador</option>
+                <option>Desenvolvedor</option>  
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem</label>
+            <textarea name="msg" id="imsg" cols="20" rows="1" placeholder="Escreva Uma Mensagem"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar">
+        </p>
+    </form>
+</body>
+</html>
